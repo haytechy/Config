@@ -1,7 +1,7 @@
 #Install font
 sudo mkdir /usr/share/fonts/JetBrainsMono
-sudo curl -L https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip -o /usr/share/fonts/JetBrainsMono/JetBrainsMono.zip
-sudo unzip /usr/share/fonts/JetBrainsMono/JetBrainsMono.zip
+sudo curl -L https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip -o /usr/share/fonts/JetBrainsMono.zip
+sudo unzip /usr/share/fonts/JetBrainsMono.zip -d /usr/share/fonts/JetBrainsMono/
 
 #Install Kitty
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
@@ -20,9 +20,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 cp .zshrc ~/.zshrc
-sed -i "s|robbyrussell|powerlevel10k/powerlevel10k|" ~/.zshrc
-source ~/.zshrc
-p10k configure
 
 #Configure TMUX
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -37,8 +34,6 @@ sudo mv ~/Downloads/nvim.appimage /usr/bin/nvim
 #Configure Node
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 source ~/.zshrc
-nvm install --lts
-nvm use --lts
 
 # bspwmrc and sxhkdrc
 #sudo apt install bspwm
