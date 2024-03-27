@@ -27,13 +27,12 @@ cp .tmux.conf ~/.tmux.conf
 
 #Configure Neovim
 git clone https://github.com/alexhayman/nvim.git ~/.config/nvim
-curl -L https://github.com/neovim/neovim/releases/download/v0.9.4/nvim.appimage -o ~/Downloads/nvim.appimage
+curl -L https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage -o ~/Downloads/nvim.appimage
 chmod u+x ~/Downloads/nvim.appimage
 sudo mv ~/Downloads/nvim.appimage /usr/bin/nvim
 
 #Configure Node
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-source ~/.zshrc
 
 # bspwmrc and sxhkdrc
 #sudo apt install bspwm
