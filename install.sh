@@ -34,6 +34,9 @@ sudo mv ~/Downloads/nvim.appimage /usr/bin/nvim
 #Configure Node
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
+#Install Dependencies
+sudo apt install xclip
+
 # bspwmrc and sxhkdrc
 #sudo apt install bspwm
 #install -Dm755 ./bspwmrc ~/.config/bspwm/bspwmrc
