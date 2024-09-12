@@ -1,6 +1,6 @@
 #Install font
 sudo mkdir /usr/share/fonts/JetBrainsMono
-sudo curl -L https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip -o /usr/share/fonts/JetBrainsMono.zip
+sudo curl -L https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip -o /usr/share/fonts/JetBrainsMono.zip
 sudo unzip /usr/share/fonts/JetBrainsMono.zip -d /usr/share/fonts/JetBrainsMono/
 
 #Install Kitty
@@ -18,8 +18,9 @@ sudo apt install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 cp .zshrc ~/.zshrc
+cp .p10k.zsh ~/.p10k.zsh
 
 #Configure TMUX
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -27,21 +28,13 @@ cp .tmux.conf ~/.tmux.conf
 
 #Configure Neovim
 git clone https://github.com/alexhayman/nvim.git ~/.config/nvim
-curl -L https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage -o ~/Downloads/nvim.appimage
+curl -L https://github.com/neovim/neovim/releases/download/v0.10.1/nvim.appimage -o ~/Downloads/nvim.appimage
 chmod u+x ~/Downloads/nvim.appimage
 sudo mv ~/Downloads/nvim.appimage /usr/bin/nvim
 
 #Configure Node
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 
 #Install Dependencies
 sudo apt install xclip
 
-# bspwmrc and sxhkdrc
-#sudo apt install bspwm
-#install -Dm755 ./bspwmrc ~/.config/bspwm/bspwmrc
-#install -Dm644 sxhkdrc ~/.config/sxhkd/sxhkdrc
-#
-## Installing polybar
-#sudo apt install polybar
-#cp -r polybar ~/.config/polybar
