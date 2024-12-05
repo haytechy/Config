@@ -28,7 +28,7 @@ cp .tmux.conf ~/.tmux.conf
 
 #Configure Neovim
 git clone https://github.com/alexhayman/nvim.git ~/.config/nvim
-curl -L https://github.com/neovim/neovim/releases/download/v0.10.1/nvim.appimage -o ~/Downloads/nvim.appimage
+curl -L https://github.com/neovim/neovim/releases/download/v0.10.2/nvim.appimage -o ~/Downloads/nvim.appimage
 chmod u+x ~/Downloads/nvim.appimage
 sudo mv ~/Downloads/nvim.appimage /usr/bin/nvim
 
@@ -36,5 +36,5 @@ sudo mv ~/Downloads/nvim.appimage /usr/bin/nvim
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 
 #Install Dependencies
+sudo apt install ripgrep
 sudo apt install xclip
-
