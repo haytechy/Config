@@ -1,6 +1,6 @@
 #Install font
 sudo mkdir /usr/share/fonts/JetBrainsMono
-sudo curl -L https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip -o /usr/share/fonts/JetBrainsMono.zip
+sudo curl -L  https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip -o /usr/share/fonts/JetBrainsMono.zip
 sudo unzip /usr/share/fonts/JetBrainsMono.zip -d /usr/share/fonts/JetBrainsMono/
 
 #Install Kitty
@@ -28,7 +28,7 @@ cp .tmux.conf ~/.tmux.conf
 
 #Configure Neovim
 git clone https://github.com/alexhayman/nvim.git ~/.config/nvim
-curl -L https://github.com/neovim/neovim/releases/download/v0.10.2/nvim.appimage -o ~/Downloads/nvim.appimage
+curl -L https://github.com/neovim/neovim/releases/download/v0.11.1/nvim-linux-x86_64.appimage -o ~/Downloads/nvim.appimage
 chmod u+x ~/Downloads/nvim.appimage
 sudo mv ~/Downloads/nvim.appimage /usr/bin/nvim
 
@@ -36,5 +36,5 @@ sudo mv ~/Downloads/nvim.appimage /usr/bin/nvim
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 
 #Install Dependencies
-sudo apt install ripgrep
 sudo apt install xclip
+sudo apt install fzf
